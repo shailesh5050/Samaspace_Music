@@ -215,7 +215,7 @@ const Library = () => {
             return  (
                 <div key={song.id} className="lib-song">
               <div className="lib-img-title">
-              <img src={`https://api.slingacademy.com/public/sample-photos/${song.id}.jpeg`} alt={song.name} />
+              <img src={`https://cms.samespace.com/assets/${song.cover}`} alt={song.name} />
                 <div className="lib-song-info">
                   <h4>{song.name}</h4>
                   <p>{song.artist}</p>
@@ -235,7 +235,7 @@ const Library = () => {
             return  (
                 <div key={song.id} className="lib-song">
               <div className="lib-img-title">
-                <img src={`https://api.slingacademy.com/public/sample-photos/${song.id}.jpeg`} alt="" />
+                <img src={`https://cms.samespace.com/assets/${song.cover}`} alt="" />
                 <div className="lib-song-info">
                   <h4>{song.name}</h4>
                   <p>{song.artist}</p>
