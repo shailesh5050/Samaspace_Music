@@ -1,43 +1,48 @@
-.home-screen{
+.home-screen {
     display: flex;
-    background-color: #050401;
+    background-color: #c79910;
 }
-.player-container{
+
+.player-container {
     display: flex;
-    
+
     flex-direction: column;
     padding: 10px;
     justify-content: center;
     width: 360px;
-    
 }
+
 .player-container img {
     width: 100%;
     height: 340px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
-
 }
-.proress-wrapper{
+
+.proress-wrapper {
     cursor: pointer;
     width: 280px;
     height: 5px;
     border-radius: 5px;
-    background-color: #383634;  
+    background-color: #383634;
 }
-.progress{   
+
+.progress {
     height: 5px;
     background-color: #ffffff;
     border-radius: 5px;
 }
-.all-controls{
+
+.all-controls {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
     align-items: center;
 }
-.option,.sound{
+
+.option,
+.sound {
     background-color: #1e1c1a;
     border-radius: 50%;
     width: 40px;
@@ -46,20 +51,20 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    color: ;
 }
-.all-controls button{
+
+.all-controls button {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     color: #9c9b99;
     font-size: 30px;
-    
 }
-.playBtn{
-    background-color: #fff!important;
-    color: #050401!important;
+
+.playBtn {
+    background-color: #fff !important;
+    color: #050401 !important;
     ont-size: 30px;
     border-radius: 50%;
     width: 40px;
@@ -69,17 +74,18 @@
     align-items: center;
 }
 
-
-.progress-bar{
+.progress-bar {
     display: flex;
     gap: 5px;
     align-items: center;
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 10px;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -90,53 +96,66 @@
     height: 100vh;
     padding: 20px;
 }
-.header-profile{
+
+.header-profile {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-
 }
-.library-wrapper{
+
+.library-wrapper {
     width: 400px;
     height: 100vh;
-    background-color: #1f1f1f;
 }
-.white{
+
+.white {
     color: white;
 }
-.library-songs{
+
+.library-songs {
     padding: 10px;
-    
 }
-.lib-song{
+
+.lib-song {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    
+
     margin-top: 5px;
 }
-.lib-song:hover{
+
+.lib-song:hover {
     background-color: #383634;
     transition: all 0.2s ease-in-out;
     border-radius: 5px;
 }
-.lib-song img{
+
+.lib-song-active {
+    background-color: #383634;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.lib-song img {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
 }
-.lib-img-title{
+
+.lib-img-title {
     display: flex;
-    
+
     gap: 5px;
 }
-.lib-img-title p{
+
+.lib-img-title p {
     font-size: 14px;
 }
-.search-box{
+
+.search-box {
     width: 98%;
     display: flex;
     justify-content: space-between;
@@ -146,21 +165,23 @@
     background-color: #2a2219;
     border-radius: 5px;
     margin-top: 10px;
-    
 }
-.search-box input{
+
+.search-box input {
     background-color: transparent;
     border: none;
     outline: none;
     color: white;
-    
+
     width: 100%;
     font-size: 18px;
 }
-.library-container{
-    padding: 10px ;
+
+.library-container {
+    padding: 10px;
 }
-.tabs{
+
+.tabs {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -168,12 +189,96 @@
     cursor: pointer;
     margin-top: 5px;
 }
-.active{
-    color:#fff;
+
+.active {
+    color: #fff;
     transition: all 0.2s ease-in-out;
-    
 }
-.inActive{
+
+.inActive {
     color: #8b8781;
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
+}
+
+/************************ Animation *******************************/
+
+.main-item {
+    padding: 10px;
+    background-color: #fff;
+    width: 700px;
+}
+
+.background-masker {
+    background-color: #fff;
+    position: absolute;
+}
+
+.btn-divide-left {
+    top: 0;
+    left: 25%;
+    height: 100%;
+    width: 5%;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -800px 0;
+    }
+
+    100% {
+        background-position: 800px 0;
+    }
+}
+
+.animated-background {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 70px;
+    position: relative;
+}
+
+.static-background {
+    background-color: #f6f7f8;
+    background-size: 800px 104px;
+    height: 70px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.shared-dom {
+    width: 800px;
+    height: 110px;
+}
+
+.sub-rect {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 20px 20px 20px 0;
+}
+
+.pure-background {
+    background-color: #eee;
+}
+
+.css-dom:empty {
+    width: 280px;
+    height: 220px;
+    border-radius: 6px;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+
+    background-image: radial-gradient(circle 16px, lightgray 99%, transparent 0), linear-gradient(lightgray, lightgray), linear-gradient(lightgray, lightgray),
+        linear-gradient(lightgray, lightgray), linear-gradient(lightgray, lightgray), linear-gradient(#fff, #fff);
+
+    background-size: 32px 32px, 200px 32px, 180px 32px, 230px 16px, 100% 40px, 280px 100%;
+
+    background-position: 24px 30px, 66px 30px, 24px 90px, 24px 142px, 0 180px, 0 0;
 }
