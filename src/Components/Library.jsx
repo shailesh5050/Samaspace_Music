@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
+import {AiFillCloseCircle} from 'react-icons/ai'
 import { useGetSongsQuery } from "../Slices/songsApiSlice";
 import { setCurrentSongData } from "../Slices/musicSlice";
 import { useDispatch,useSelector } from "react-redux";
+import { setLibaryStatus } from '../Slices/musicSlice';
 const Library = () => {
   const { data:songs, error, isLoading } = useGetSongsQuery();
   const [songList, setSongList] = useState([]);
@@ -12,9 +14,10 @@ const Library = () => {
   const [searchKey, setSearchKey] = useState('');
   const dispatch = useDispatch();
   const selectedSong = useSelector((state) => state.music.currentSong);
+  const openLibrary = useSelector((state) => state.music.openLibrary);
   useEffect(() => {
    songs && setSongsToList();
-  }, [isTopTrack,isLoading,selectedSong]);
+  }, [isTopTrack,isLoading,selectedSong,openLibrary]);
   function tabChange(tabName) {
     tabName === "foryou" ? setIsTopTrack(false) : setIsTopTrack(true);
     setSearchKey('')
@@ -45,7 +48,8 @@ const Library = () => {
     dispatch(setCurrentSongData(song));
   }
   return (
-    <div className="library-wrapper ">
+    <div className={`library-wrapper ${openLibrary ? 'open-library' :''}`} >
+      <span className="lib-close-btn" onClick={()=>{dispatch(setLibaryStatus(true))}}><AiFillCloseCircle /></span>
       <div className="library-container">
         <div className="tabs">
           <h3 className={!isTopTrack?'active':'inActive'} onClick={()=>{tabChange('foryou')}}>For You </h3>

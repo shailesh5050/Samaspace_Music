@@ -1,284 +1,335 @@
 .home-screen {
-    display: flex;
-    background-color: #c79910;
+  display: flex;
+  background-color: #c79910;
+  overflow: hidden;
+}
+
+.player-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .player-container {
-    display: flex;
-
-    flex-direction: column;
-    padding: 10px;
-    justify-content: center;
-    width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  margin-top: 60px;
+  min-width: 300px;
+  max-width: 460px;
 }
 
 .player-container img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
+  max-width: 100%;
+  min-width: 30vw;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 15px 0;
 }
 
 .proress-wrapper {
-    cursor: pointer;
-    width: 280px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: #383634;
+  cursor: pointer;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #383634;
 }
 
 .progress {
-    height: 5px;
-    background-color: #ffffff;
-    border-radius: 5px;
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
 .all-controls {
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .option,
 .sound {
-    background-color: #1e1c1a;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+  background-color: #1e1c1a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 .all-controls button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #9c9b99;
-    font-size: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #9c9b99;
+  font-size: 30px;
 }
 
 .playBtn {
-    background-color: #fff !important;
-    color: #050401 !important;
-    ont-size: 30px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #fff !important;
+  color: #050401 !important;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .progress-bar {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .buttons {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-    width: 200px;
-    height: 100vh;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 300px;
+  height: 100vh;
+  padding: 20px;
 }
 
 .header-profile {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .library-wrapper {
-    width: 400px;
-    height: 100vh;
+  min-width: 40%;
+  height: 100vh;
 }
 
 .white {
-    color: white;
-}
-
-.library-songs {
-    padding: 10px;
-}
-
-.lib-song {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-
-    margin-top: 5px;
-}
-
-.lib-song:hover {
-    background-color: #383634;
-    transition: all 0.2s ease-in-out;
-    border-radius: 5px;
-}
-
-.lib-song-active {
-    background-color: #383634;
-    transition: all 0.2s ease-in-out;
-    border-radius: 5px;
-}
-
-.lib-song img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.lib-img-title {
-    display: flex;
-
-    gap: 5px;
-}
-
-.lib-img-title p {
-    font-size: 14px;
-}
-
-.search-box {
-    width: 98%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    padding: 0 15px;
-    background-color: #2a2219;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.search-box input {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: white;
-
-    width: 100%;
-    font-size: 18px;
+  color: white;
 }
 
 .library-container {
-    padding: 10px;
+  padding: 10px;
+}
+
+.library-songs {
+  padding: 10px;
+}
+
+.lib-song {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+
+  margin-top: 5px;
+}
+
+.lib-song:hover {
+  background-color: #383634;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+.lib-song-active {
+  background-color: #383634;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+.lib-song img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.lib-img-title {
+  display: flex;
+
+  gap: 5px;
+}
+
+.lib-img-title p {
+  font-size: 14px;
+}
+
+.search-box {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px;
+  background-color: #2a2219;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.search-box input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+
+  width: 100%;
+  font-size: 18px;
 }
 
 .tabs {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 5px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 5px;
 }
 
 .active {
-    color: #fff;
-    transition: all 0.2s ease-in-out;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
 }
 
 .inActive {
-    color: #8b8781;
-    transition: all 0.2s ease-in-out;
+  color: #8b8781;
+  transition: all 0.2s ease-in-out;
 }
 
 /************************ Animation *******************************/
 
 .main-item {
-    padding: 10px;
-    background-color: #fff;
-    width: 700px;
+  padding: 10px;
+  background-color: #fff;
+  width: 700px;
 }
 
 .background-masker {
-    background-color: #fff;
-    position: absolute;
+  background-color: #fff;
+  position: absolute;
 }
 
 .btn-divide-left {
-    top: 0;
-    left: 25%;
-    height: 100%;
-    width: 5%;
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 5%;
 }
 
 @keyframes placeHolderShimmer {
-    0% {
-        background-position: -800px 0;
-    }
+  0% {
+    background-position: -800px 0;
+  }
 
-    100% {
-        background-position: 800px 0;
-    }
+  100% {
+    background-position: 800px 0;
+  }
 }
 
 .animated-background {
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: placeHolderShimmer;
-    animation-timing-function: linear;
-    background-color: #f6f7f8;
-    background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
-    background-size: 800px 104px;
-    height: 70px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 70px;
+  position: relative;
+}
+.open-library {
+  width: 100%;
+  left: 0px !important;
+  transition: all 0.2s ease-in-out;
+}
+.lib-btn {
+  display: none;
+  background-color: #1db954;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.lib-close-btn{
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .player-container img {
+    width: 60vw;
+  }
+  .lib-btn {
+    display: block;
+    z-index: 1000;
+  }
+  .header {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 100vw;
+    height: 75px;
+    padding: 20px;
+  }
+  .player-wrapper {
+    position: absolute;
+    height: 90%;
+    margin-top: 20px;
+  }
+  .library-wrapper {
+    overflow: hidden;
+    position: absolute;
+    left: calc(-100%);
+    z-index: 1000;
+    background-color: #1e1c1a;
+    transition: all 0.2s ease-in-out;
+  }
+  .lib-close-btn{
+    display: block;
+   font-size: 35px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+  }
 }
-
-.static-background {
-    background-color: #f6f7f8;
-    background-size: 800px 104px;
-    height: 70px;
-    position: relative;
-    margin-bottom: 20px;
+@media screen and (max-width: 500px) {
+  .player-container img {
+    width: 85vw;
+  }
 }
-
-.shared-dom {
-    width: 800px;
-    height: 110px;
-}
-
-.sub-rect {
-    border-radius: 100%;
-    width: 70px;
-    height: 70px;
-    float: left;
-    margin: 20px 20px 20px 0;
-}
-
-.pure-background {
-    background-color: #eee;
-}
-
-.css-dom:empty {
-    width: 280px;
-    height: 220px;
-    border-radius: 6px;
-    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.2);
-    background-repeat: no-repeat;
-
-    background-image: radial-gradient(circle 16px, lightgray 99%, transparent 0), linear-gradient(lightgray, lightgray), linear-gradient(lightgray, lightgray),
-        linear-gradient(lightgray, lightgray), linear-gradient(lightgray, lightgray), linear-gradient(#fff, #fff);
-
-    background-size: 32px 32px, 200px 32px, 180px 32px, 230px 16px, 100% 40px, 280px 100%;
-
-    background-position: 24px 30px, 66px 30px, 24px 90px, 24px 142px, 0 180px, 0 0;
+.loader-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color:#1e1c1a;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
