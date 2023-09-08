@@ -39,7 +39,7 @@ const Library = () => {
     } else {
       songArray = forYouSongs
     }
-    getDuration (songArray)
+    //getDuration (songArray)
    
   }
 
@@ -154,7 +154,7 @@ const Library = () => {
                   </div>
 
                   <div className='lib-song-time'>
-                  <p>{song.duration ? song.duration :'0:00'}</p>
+                  <p>{song.duration ? song.duration :'0:45'}</p>
                   </div>
                 </div>
               )
@@ -185,7 +185,7 @@ const Library = () => {
                   </div>
 
                   <div className='lib-song-time'>
-                    <p>{song.duration ? song.duration :'0:00'}</p>
+                    <p>{song.duration ? song.duration :'0:45'}</p>
                   </div>
                 </div>
               )
